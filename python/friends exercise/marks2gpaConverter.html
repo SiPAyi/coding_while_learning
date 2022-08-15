@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks to GPA Converter</title>
+<style>
+    body{
+        margin:0px;
+    }
+/* introduction */
+#title{
+    background-color: rgb(94, 245, 94);
+    color: green;
+    margin: 0px;
+    text-align: center;
+    padding: 25px;
+    position: sticky;
+    top: 0px;
+}
+div#intro{
+    margin: 30px 50px;
+}
+div#intro > h2{
+    font-style: italic;
+}
+
+/* basic table properties */
+table{
+    border: 1px solid green;
+    border-radius: 5px;   
+}
+td{
+    padding:5px;
+}
+input{
+    width:50px;
+    border-radius: 5px;
+    border: 1px solid green;
+    height: 20px
+}
+button{
+    text-align: center;
+    margin: 0px 40px 10px 100px;
+    background-color: rgb(72, 177, 72);
+    border: 1px solid rgb(48, 133, 48);
+    border-radius: 5px;
+    padding: 5px;
+}
+span{
+    font-size: 1em;
+}
+
+/* tables alignment */
+.tables{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tables h1{
+    text-align: center;
+}
+.table{
+    max-width: 400px;
+    border: 1px solid green;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(138, 240, 138);
+    margin: 10px auto;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.table h1, .table table{
+    margin: 30px;
+}
+</style>
+<!-- <script>
+    // var credits = {'telugu': 1, 'english': 2, 'maths': 5, "chemistry": 2, "chemistry lab": 1, 'physics': 4, 'physics lab': 1, "it":2, "it lab":1}
+    var credits = [1, 2, 5, 2, 1, 4, 1, 2, 1] //telugu, english, maths, chemistry, chemistrylab, physics, physicslab, it, itlab
+</script> -->
+
+</head>
+<body>
+
+<!-- this is intro of this webpage-->
+<h1 id="title" >Marks 2 GPA Converter</h1>
+<div id="intro">
+    <h2>About</h2>
+    <p>
+    In this page you can convert your marks into grades
+    </p>
+</div>
+
+<!-- table are started from here-->
+<form action="">
+<div class="tables">
+
+<div class="table a">
+<h1>PUC1 SEM1</h1>
+<table id="p1s1">
+    <tr>
+        <td>SUBJECT</td>
+        <td>MARKS</td>
+    </tr>
+    <tr>
+        <td>TELUGU</td>
+        <td><input type="text"  id="subject1"></td>
+    </tr>
+    <tr>
+        <td>ENGLISH</td>
+        <td><input type="text" id="subject2"></td>
+    </tr>
+    <tr>
+        <td>MATHEMATICS</td>
+        <td><input type="text" id="subject3"></td>
+    </tr>
+    <tr>
+        <td>CHEMISTRY</td>
+        <td><input type="text" id="subject4"></td>
+    </tr>
+    <tr>
+        <td>CHEMISTRY LAB</td>
+        <td><input type="text" id="subject5"></td>
+    </tr>
+    <tr>
+        <td>PHYSICS</td>
+        <td><input type="text" id="subject6"></td>
+    </tr>
+    <tr>
+        <td>PHYSICS LAB</td>
+        <td><input type="text" id="subject7"></td>
+    </tr>
+    <tr>
+        <td>INFORMATION TECHNOLOGY</td>
+        <td><input type="text" id="subject8"></td>
+    </tr>
+    <tr>
+       <td>I.T LAB</td>
+    <td><input type="text" id="subject9"></td>
+   </tr>
+</table>
+<button onclick="getScore()" type="button" >Get Grade</button><span id="grade1"> 0 GPA</span>
+<script>
+    function mark2grade(marks){
+        if (36 <= marks && marks <= 40){
+            score = 10;
+        }
+        else if (32 <= marks && marks < 36){
+            score = 9;
+        }
+        else if (28 <= marks && marks < 32){
+            score = 8;
+        }
+        else if (24 <= marks && marks < 28){
+            score = 7;
+        }
+        else if (18 <= marks && marks < 24){
+            score = 6;
+        } 
+        else if (marks > 40 || marks < 0){
+            score = 0;
+        }
+        else{
+            score = 5;
+        }
+        return score;
+    }
+
+    function getScore(){
+        s1 = document.getElementById('subject1').value ;   //telugu
+        s1 = mark2grade(parseInt(s1))
+        s2 = document.getElementById('subject2').value ;  //english
+        s2 = mark2grade(parseInt(s2))
+        s3 = document.getElementById('subject3').value   ;  //maths
+        s3 = mark2grade(parseInt(s3))
+        s4 = document.getElementById('subject4').value    ;//chemistry
+        s4 = mark2grade(parseInt(s4))
+        s5 = document.getElementById('subject5').value   ; //chemistry lab
+        s5 = mark2grade(parseInt(s5))
+        s6 = document.getElementById('subject6').value   ; //physics
+        s6 = mark2grade(parseInt(s6))
+        s7 = document.getElementById('subject7').value    ;//physics lab
+        s7 = mark2grade(parseInt(s7))
+        s8 = document.getElementById('subject8').value   ; //it
+        s8 = mark2grade(parseInt(s8))
+        s9 = document.getElementById('subject9').value   ; //it lab
+        s9 = mark2grade(parseInt(s9))
+        
+        grade = (s1*3 + s2*3 + s3*5 + s4*4 + s5*1 + s6*4 + s7*1 + s8*2 + s9*1)/24;
+        document.getElementById('grade1').textContent = grade
+    }
+</script>
+</div>
+
+
+</div>
+</form>
+
+</body>
+</html>

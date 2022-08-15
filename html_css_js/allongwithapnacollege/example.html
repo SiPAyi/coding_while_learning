@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar{
+            color: red;
+            float: left;
+            width:35%
+        }
+        .sidebar h1{
+            color:maroon
+        }
+.sidebar ul{
+list-style-type: none;
+}
+        .page{
+            float:right;
+            width:65%; 
+        }
+
+        @media screen and (min-width:1080px) {
+            .sidebar li::after{
+                content:":  " attr(data-name) "(" attr(data-email) ")"
+            }
+        }
+        @media screen and (max-width:1080px) and (min-width:700px) {
+            .sidebar li::after{
+                content:": " attr(data-name)
+            }
+        }
+        @media screen and (max-width:700px) and (min-width:500px){
+            .sidebar li::after{
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>employees</h1>
+        <ul>
+            <li data-name="sai" data-email="saikr2005@gmail.com">user1</li>
+            <li data-name="sravan" data-email="ro200748@rguktong.ac.in">user2</li>
+            <li data-name="srinadh" data-email="ro200088#rguktong.ac.in">user3</li>
+        </ul>
+    </div>
+    <div class="page">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quasi quas pariatur repellat aliquid enim et placeat nostrum excepturi obcaecati neque facilis nulla est, dolorum necessitatibus quae perferendis optio maxime ipsa tempora unde nisi quibusdam? Quae natus ratione laudantium, cumque nisi illum numquam eius dolorum, error incidunt, consequatur temporibus mollitia at deleniti sapiente fugit id ducimus reprehenderit dolores? Ipsam harum distinctio soluta molestias aspernatur et cum quisquam. Fugit, adipisci! Aut, consequuntur quae corrupti necessitatibus, fugit corporis itaque autem facere eaque, quaerat placeat eum! Sequi, rem culpa unde nihil quam, vel dolorem rerum autem dignissimos molestias debitis laborum hic commodi provident veniam magni? Possimus similique quae, cum id doloremque obcaecati expedita perspiciatis! Doloremque itaque beatae tempora obcaecati ipsa quia esse ratione placeat error reiciendis aspernatur possimus laudantium commodi, quod eveniet facere debitis omnis voluptates fugit delectus suscipit doloribus neque magnam voluptatibus. Quia, blanditiis. Itaque dignissimos voluptas repudiandae nulla vitae quasi harum, ut voluptatibus suscipit dicta impedit nobis dolor veniam provident, officiis cumque sapiente in. Deserunt maxime explicabo alias ratione quae, dicta numquam odio, illum excepturi sunt dolorem dignissimos aliquam enim molestias repellendus? Voluptatibus odit sapiente laudantium, pariatur quod numquam. Velit doloribus provident quibusdam corrupti nesciunt dicta atque distinctio qui nisi! Ex aspernatur saepe tempora ipsam eos et ad dolores laborum. Facere sapiente, nobis facilis a ab sint, vero veniam sequi enim, voluptate quibusdam. Aut ullam obcaecati ex unde nihil, voluptatem mollitia nostrum vero dignissimos quibusdam tempore officiis modi repudiandae placeat cum expedita esse commodi debitis quos sunt beatae eos natus fuga. Harum, eius esse. Dolore repellat, beatae totam architecto, obcaecati eveniet corrupti, fuga repellendus officiis consequatur facere asperiores modi perspiciatis maiores illum nobis excepturi dolorem voluptate? Incidunt, doloremque veniam? Veniam doloribus aperiam nesciunt, dolor officia quibusdam, architecto quis esse a neque numquam quas deserunt repellat explicabo. Autem rerum dolor perspiciatis repudiandae aliquid! Quo minus, facere blanditiis ipsam optio corrupti aliquid quas aut cupiditate maiores ullam debitis, iste illo perspiciatis praesentium! Harum tempore ducimus nobis unde laudantium eaque numquam in laboriosam quia? Ex voluptatum, ipsa id veritatis hic facere doloremque culpa corporis cum fugiat ea officia eos cupiditate quasi consequatur dignissimos eaque tempore est. Velit expedita maxime commodi culpa consequatur id ipsa unde voluptas provident voluptatibus eligendi optio amet totam laboriosam molestias voluptatum veniam, earum aperiam dolor ullam iure, quod a pariatur. Ad, dicta esse adipisci modi, velit fugiat architecto ab ullam quam perferendis odio explicabo quis itaque praesentium repudiandae? Velit, inventore.
+    </div>
+</body>
+</html>

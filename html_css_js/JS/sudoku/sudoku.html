@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <style>
+        body{
+            max-width:90%;
+            margin:1% auto;
+        }
+        /* .container{
+            display:flex;
+            flex-wrap: wrap;
+            max-width:300px;
+            margin:auto;
+       }
+        .box{
+            border:1px solid green;
+            text-align:center;
+            width:30%;
+            aspect-ratio: 10/9;
+        }
+
+
+       .boxInput{
+           width:50px;
+       } */
+
+       .mainTable{
+           max-width:300px;
+           margin:auto;
+           background-color: blue;
+           border-radius:5px;
+       }
+       .cell{
+           border:0px solid green;
+       }
+
+       .nestedTable{
+           margin:0px;
+           background-color: violet;
+
+       }
+       .nestedCell{
+           border:1px solid green;
+           padding:0.2em;
+           margin:0px;
+           background-color: aqua;
+           border-radius:5px;
+       }
+       input[type='text']{
+           width:2em;
+           aspect-ratio: 1/1;
+           border:0px solid white;
+           background-color: aqua;
+           text-align:center;
+       }
+
+    </style>
+</head>
+<body>
+<form action="">
+<table class="mainTable">
+    <tr>
+        <td id="box1" class="cell">
+            
+<table class="nestedTable">
+    <tr>
+        <td id="a11" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a12" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a13" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a14" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a15" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a16" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a17" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a18" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a19" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+
+        </td>
+        <td id="box2" class="cell">
+
+   <table class="nestedTable">
+    <tr>
+        <td id="a21" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a22" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a23" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a24" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a25" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a26" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a27" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a28" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a239" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+        <td id="box3" class="cell">
+
+   <table class="nestedTable">
+    <tr>
+        <td id="a31" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a32" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a33" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a34" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a35" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a36" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a37" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a38" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a39" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+    </tr>
+    <tr>
+        <td id="box4" class="cell">
+
+    <table class="nestedTable">
+    <tr>
+        <td id="a41" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a42" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a43" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a44" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a45" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a46" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a47" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a48" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a49" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+        <td id="box5" class="cell">
+
+    <table class="nestedTable">
+    <tr>
+        <td id="a51" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a52" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a53" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a54" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a55" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a56" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a57" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a58" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a59" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+        <td id="box6" class="cell">
+
+     <table class="nestedTable">
+    <tr>
+        <td id="a61" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a62" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a63" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a64" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a65" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a66" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a67" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a68" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a69" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+    </tr>
+    <tr>
+        <td id="box7" class="cell">
+
+    <table class="nestedTable">
+    <tr>
+        <td id="a71" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a72" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a73" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a74" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a75" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a76" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a77" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a78" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a79" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+        <td id="box8" class="cell">
+
+    <table class="nestedTable">
+    <tr>
+        <td id="a81" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a82" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a83" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a84" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a85" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a86" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a87" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a88" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a89" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+        <td id="box9" class="cell">
+
+    <table class="nestedTable">
+    <tr>
+        <td id="a91" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a92" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a93" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a94" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a95" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a96" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+    <tr>
+        <td id="a97" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a98" class="nestedCell">
+            <input type="text">
+        </td>
+        <td id="a99" class="nestedCell">
+            <input type="text">
+        </td>
+    </tr>
+</table>
+            
+        </td>
+    </tr>
+</table>
+</form>
+
+<script src="sudoku.js"></script>
+</body>
+</html>

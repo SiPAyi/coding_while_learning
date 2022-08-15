@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    height:200px;
+    width:300px;
+    background-color: aquamarine;
+}
+.fit{
+    height:100%;
+    width:100%;
+    object-fit:contain;
+}
+.fit1{
+    height:100%;
+    width:100%;
+    object-fit:fill;
+}
+.fit2{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+    </style>
+</head>
+<body>
+    <div class="box"><img src="image.png" alt="a random image" class="fit"></div>
+    <div class="box"><img src="image.png" alt="a random image" class="fit1"></div>
+    <div class="box"><img src="image.png" alt="a random image" class="fit2"></div>
+</body>
+</html>

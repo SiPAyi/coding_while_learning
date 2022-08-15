@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button{
+            width:100px;
+            border:2px solid violet;
+            padding:5px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+   
+       
+    </style>
+</head>
+<body>
+    <h1>Demo Java Script</h1>
+    <button onclick="showMsg">click!</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi omnis, aperiam laborum odit ex voluptates alias repellendus voluptatibus mollitia nostrum modi saepe facere provident, qui praesentium. Culpa perspiciatis accusantium ex totam necessitatibus laborum nostrum quisquam voluptas. Quasi adipisci expedita accusantium officia neque perspiciatis alias ab cumque eligendi, facilis nesciunt quas recusandae tenetur aliquid, veniam soluta temporibus aperiam minima quisquam rem in, voluptate nam vero deserunt. Incidunt qui sed ducimus aspernatur possimus recusandae quo, eligendi enim quia molestiae distinctio, voluptates, eum laborum nobis consequuntur ipsam? Fuga, eaque omnis similique cum possimus labore tempora aperiam quo, sit dolorum debitis, consequatur numquam.</p>
+    <script>
+document.querySelector('button').addEventListener('click',showMsg);
+function showMsg(){
+    let name = prompt('Enter Name of Student');
+    document.querySelector('button').textContent = 'clicked!';
+    prompt('hey'+name+'you succefully completed your application')
+}
+    </script>
+</body>
+</html>

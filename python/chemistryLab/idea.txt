@@ -1,0 +1,12 @@
+program randomly give a compound and do not give it's name, we can have some tests 
+and we have to find the compound name
+
+tests
+    color test
+    odour test
+    physical state
+    burning test
+    solubility test
+
+
+

@@ -1,0 +1,105 @@
+keywords
+identifiers
+variables
+
+variable assignment, multiple assignments
+
+statements and comments  
+
+operators
+    arithmetic operators
+    comparison / relational operators
+    logical / boolean operators
+    boolean operators
+    assignment operators
+    membership operators
+
+rules for solving equation
+    PEMDAS
+    BEDMAS
+
+input from user
+
+numeric data types
+    int 
+    float
+    complex
+
+sequence data types
+    str
+    list
+    tuple
+    range
+
+mapping data types
+    dict
+
+set data types
+    set
+    frozenset
+
+mutable and immutable types
+
+input and output
+    print
+        default print
+            sep
+            end
+        formated print
+            str.format()
+
+
+conditional statements
+    if
+    if..else
+    nested if
+    if..elif
+    short hand if
+    short hand if-else
+
+
+loops, control statements
+    while loops
+        infinite loops
+        while loop with else statements
+    for loops
+        range function
+        for loop with else
+        nested loops
+    control statements
+        break
+        continue
+        pass
+
+list
+    how to create one
+    list index
+    negative index
+    accessing all elements in a list using for loop
+    list operations
+        addition of two lists
+        multipling a list
+        list slice
+    list methods
+        adding element into a list
+            append()
+            extend() #l1.extend(l2)
+            insert(i, x)
+        deleting elements  
+            remove(x)
+            clear()
+            pop(i)
+        list.index(x, start, end)
+        list.count(x)
+        list.sort(key=None, reverse=False)
+        list.reverse()
+        list.copy()
+        list comprehension
+        list membership test
+        built-in function
+            len
+            max
+            min 
+            sum
+
+
